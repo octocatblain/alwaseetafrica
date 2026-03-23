@@ -14,10 +14,8 @@ export default function HeroSection() {
           muted 
           loop 
           playsInline
-          poster="/images/hero-poster.jpg"
         >
-          <source src="/videos/hero-bg.webm" type="video/webm" />
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="hero-overlay" />
