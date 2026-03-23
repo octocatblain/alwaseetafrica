@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const { t } = useTranslation();
   const { language, setLanguage } = useLanguage();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const logo = t('nav.logo');
@@ -25,9 +27,16 @@ export default function Header() {
     { key: 'contact', href: '#contact' },
   ];
 
-  const handleScroll = (href: string) => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
+    
+    // If not on the homepage, let the default link behavior (navigating to /#hash) work
+    if (pathname !== '/') return;
+
+    // On the homepage, smooth scroll
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -39,7 +48,7 @@ export default function Header() {
 
   return (
     <nav className="nav" suppressHydrationWarning>
-      <a href="#" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
+      <a href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
         <Image
           src="/logos/alwaseet_logo.png"
           alt={logo}
@@ -54,10 +63,10 @@ export default function Header() {
       <ul className="nav-links">
         {navItems.map((item) => (
           <li key={item.key}>
-            <a href={item.href} onClick={(e) => {
-              e.preventDefault();
-              handleScroll(item.href);
-            }}>
+            <a 
+              href={pathname === '/' ? item.href : `/${item.href}`} 
+              onClick={(e) => handleScroll(e, item.href)}
+            >
               {t(`nav.${item.key}`)}
             </a>
           </li>
@@ -81,7 +90,11 @@ export default function Header() {
               {t('nav.lang.ar')}
             </button>
           </div>
-          <a href="#contact" className="nav-cta">
+          <a 
+            href={pathname === '/' ? '#contact' : '/#contact'} 
+            className="nav-cta"
+            onClick={(e) => handleScroll(e, '#contact')}
+          >
             {t('nav.engage')}
           </a>
         </div>
@@ -118,11 +131,8 @@ export default function Header() {
           {navItems.map((item) => (
             <a
               key={item.key}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll(item.href);
-              }}
+              href={pathname === '/' ? item.href : `/${item.href}`}
+              onClick={(e) => handleScroll(e, item.href)}
               style={{
                 color: 'var(--text-dim)',
                 textDecoration: 'none',
