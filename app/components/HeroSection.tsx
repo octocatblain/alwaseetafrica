@@ -7,16 +7,38 @@ export default function HeroSection() {
 
   return (
     <section className="hero" id="home">
+      {/* Video Background with overlay */}
+      <div className="hero-video-bg">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          poster="/images/hero-poster.jpg"
+        >
+          <source src="/videos/hero-bg.webm" type="video/webm" />
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className="hero-overlay" />
+
       <div className="hero-content">
-        <div className="hero-eyebrow">{t('hero.eyebrow')}</div>
-        <h1>
-          {t('hero.titlePrefix')}
-          <em>{t('hero.titleEm')}</em>
-          {t('hero.titleSuffix')}
-          <div className="
-"></div>        </h1>
-        <p className="hero-sub">{t('hero.subtitle')}</p>
-        <div className="hero-actions">
+        <div className="hero-eyebrow fade-in-up">{t('hero.eyebrow')}</div>
+        
+        <h1 className="fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <span className="hero-title-row">
+            {t('hero.titlePrefix')}
+            <em>{t('hero.titleEm')}</em>
+          </span>
+          <span className="hero-title-row">{t('hero.titleLine2')}</span>
+          <span className="hero-title-row">{t('hero.titleLine3')}</span>
+        </h1>
+
+        <p className="hero-sub fade-in-up" style={{ animationDelay: '0.2s' }}>
+          {t('hero.subtitle')}
+        </p>
+
+        <div className="hero-actions fade-in-up" style={{ animationDelay: '0.3s' }}>
           <a href="#services" className="btn-primary">
             {t('hero.cta1')}
           </a>
@@ -24,7 +46,8 @@ export default function HeroSection() {
             {t('hero.cta2')}
           </a>
         </div>
-        <div className="hero-stats">
+
+        <div className="hero-stats fade-in-up" style={{ animationDelay: '0.4s' }}>
           <div>
             <div className="stat-num">{t('hero.stat1Num')}</div>
             <div className="stat-label">{t('hero.stat1Label')}</div>
