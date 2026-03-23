@@ -36,20 +36,6 @@ export default function Footer() {
         <li><a href="/privacy">{t('footer.privacy')}</a></li>
         <li><a href="/legal">{t('footer.terms')}</a></li>
         <li>
-          <a href={social.linkedin} target="_blank" rel="noopener noreferrer" title={t('footer.linkedin')} aria-label={t('footer.linkedin')}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.736 0-9.646h3.554v1.364c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.505zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.704 0-.948.771-1.703 1.96-1.703 1.188 0 1.914.755 1.948 1.703 0 .946-.76 1.704-1.993 1.704zm1.581 11.019H3.819V9.934h3.099v10.518zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href={social.facebook} target="_blank" rel="noopener noreferrer" title={t('footer.facebook')} aria-label={t('footer.facebook')}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-        </li>
-        <li>
           <a href={social.whatsapp} target="_blank" rel="noopener noreferrer" title={t('footer.whatsapp')} aria-label={t('footer.whatsapp')}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.67.15-.23.297-.921 1.165-.949 1.404-.029.239-.197.363-.469.472-.272.149-1.758.467-3.426 2.126-1.27 1.13-2.017 2.529-2.251 2.826-.23.297.048.458.229.606.149.149.472.382.707.573.235.19.393.271.59.271.196 0 .328-.036.475-.117.146-.08 1.013-.472 1.206-.78.193-.308.385-.921.46-1.428.075-.507.256-.842.55-1.104.29-.261.77-.333 1.2-.25.43.084 1.686.546 1.966 1.04.28.494.371 1.1.26 1.366-.11.265-.44.404-.758.472-1.033.215-2.133-.066-3.738-1.977-1.45-1.658-1.768-2.644-1.933-3.583-.067-.404.132-1.08.535-1.656.396-.56.834-1.29 1.017-1.586l.063-.105c.28-.46.197-1.277-.289-1.67-.479-.385-1.22-.496-1.756-.293-.506.19-1.282.667-1.528 1.368-.224.623-.11 1.26.267 2.044.378.787 1.076 1.717 1.813 2.582.737.865 2.113 2.44 4.582 3.643 1.31.692 2.203.79 2.805.655.602-.135 1.395-.54 1.588-1.042.193-.502.29-.97.203-1.283-.087-.313-.378-.5-.89-.656z"/>
@@ -64,18 +50,8 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          <a href={social.x} target="_blank" rel="noopener noreferrer" title={t('footer.x')} aria-label={t('footer.x')}>
-            <Twitter size={20} />
-          </a>
-        </li>
-        <li>
           <a href={social.instagram} target="_blank" rel="noopener noreferrer" title={t('footer.instagram')} aria-label={t('footer.instagram')}>
             <Instagram size={20} />
-          </a>
-        </li>
-        <li>
-          <a href={social.youtube} target="_blank" rel="noopener noreferrer" title={t('footer.youtube')} aria-label={t('footer.youtube')}>
-            <Youtube size={20} />
           </a>
         </li>
         <li>

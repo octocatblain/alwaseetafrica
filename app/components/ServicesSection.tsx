@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 export default function ServicesSection() {
   const { t } = useTranslation();
@@ -51,6 +52,15 @@ export default function ServicesSection() {
           </div>
           );
         })}
+        <div className="service-image-card">
+          <Image 
+            src="/strategy.jpg" 
+            alt={t('services.service7Title')} 
+            fill
+            sizes="(max-width: 768px) 100vw, 66vw"
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
       </div>
     </section>
   );
