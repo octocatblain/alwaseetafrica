@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: 'Alwaseet Africa',
     images: [
       {
-        url: '/icon.svg',
+        url: '/favicon/android-chrome-512x512.png',
         width: 512,
         height: 512,
         alt: 'Alwaseet Africa',
@@ -69,20 +69,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/favicon/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/favicon/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
 }
 
 export const viewport = {
