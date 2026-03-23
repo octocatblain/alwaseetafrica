@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 export default function WhySection() {
   const { t } = useTranslation();
@@ -26,9 +27,38 @@ export default function WhySection() {
           </div>
         </div>
 
-        <div className="quote-block">
-          <blockquote>{t('why.quote')}</blockquote>
-          <cite>{t('why.quoteAuthor')}</cite>
+        <div>
+          <div className="quote-block">
+            <blockquote>{t('why.quote')}</blockquote>
+            <cite>{t('why.quoteAuthor')}</cite>
+          </div>
+          
+          <div className="why-images">
+            <div className="why-img-wrapper">
+              <Image 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop" 
+                alt="Strategic Planning"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="why-img-wrapper">
+              <Image 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop" 
+                alt="Professional Collaboration"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
+            </div>
+            <div className="why-img-wrapper">
+              <Image 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop" 
+                alt="Market Analysis"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
