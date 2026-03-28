@@ -1,6 +1,10 @@
+import { MetadataRoute } from 'next';
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alwaseetafrica.com';
 
-export default function robots() {
+export const dynamic = 'force-static';
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {

@@ -55,12 +55,9 @@ export default function HeroSection() {
         <div className="hero-eyebrow fade-in-up">{t('hero.eyebrow')}</div>
         
         <h1 className="fade-in-up" style={{ animationDelay: '0.1s' }}>
-          <span className="hero-title-row">
-            {t('hero.titlePrefix')}
-            <em>{t('hero.titleEm')}</em>
-          </span>
-          <span className="hero-title-row">{t('hero.titleLine2')}</span>
-          <span className="hero-title-row">{t('hero.titleLine3')}</span>
+          {t('hero.titlePrefix')}{' '}
+          <em>{t('hero.titleEm')}</em>{' '}
+          {t('hero.titleLine2')} {t('hero.titleLine3')}
         </h1>
 
         <p className="hero-sub fade-in-up" style={{ animationDelay: '0.2s' }}>
