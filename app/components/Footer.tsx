@@ -3,6 +3,7 @@
 import { useTranslation } from 'react-i18next';
 import { Instagram, Linkedin, Facebook, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -119,9 +120,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-copy">{t('footer.copyright')}</div>
           <div className="footer-legal">
-            <a href="/privacy">{t('footer.privacy')}</a>
+            <Link href="/privacy/">{t('footer.privacy')}</Link>
             <span>|</span>
-            <a href="/legal">{t('footer.terms')}</a>
+            <Link href="/legal/">{t('footer.terms')}</Link>
           </div>
         </div>
       </div>
