@@ -95,7 +95,9 @@
     "centralAfrica": "أفريقيا الوسطى",
     "centralAfricaCountries": "الكاميرون، جمهورية الكونغو الديمقراطية",
     "southernAfrica": "أفريقيا الجنوبية",
-    "southernAfricaCountries": "جنوب أفريق����ا، زامبيا، زيمبابوي"
+    "southernAfricaCountries": "جنوب أفريقيا، زامبيا، زيمبابوي",
+    "northAfrica": "شمال أفريقيا",
+    "northAfricaCountries": "المغرب، ليبيا، مصر"
   },
   "why": {
     "eyebrow": "لماذا تختار الوسيط أفريقيا",

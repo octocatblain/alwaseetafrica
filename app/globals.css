@@ -720,6 +720,266 @@ section {
   line-height: 1.3;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   PRESENCE SECTION
+ ══════════════════════════════════════════════════════════════ */
+.presence-section {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.presence-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 5rem;
+  align-items: start;
+  position: relative;
+}
+
+.presence-intro {
+  position: sticky;
+  top: 120px;
+  z-index: 2;
+}
+
+.presence-watermark {
+  color: var(--green);
+  opacity: 0.05;
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.presence-watermark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.region-card {
+  padding: 2.5rem 2.2rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.region-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--green);
+  transition: height 0.35s ease;
+}
+
+.region-icon-wrapper {
+  margin-bottom: 1.5rem;
+  width: 48px;
+  height: 48px;
+  background: var(--green-subtle);
+  border: 1px solid var(--green-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--green);
+  transition: all 0.3s ease;
+}
+
+.region-card:hover {
+  background: var(--bg-raised);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11, 122, 61, 0.08);
+}
+
+.region-card:hover .region-icon-wrapper {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.region-card:hover::before {
+  height: 100%;
+}
+
+.region-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.region-card:hover h4 {
+  color: var(--green);
+}
+
+.region-card ul {
+  list-style: none;
+}
+
+.region-card li {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.region-card li:last-child { border-bottom: none; }
+
+.region-card li::before {
+  content: '— ';
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.presence-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 5rem;
+  align-items: start;
+  position: relative;
+}
+
+.presence-intro {
+  position: sticky;
+  top: 120px;
+  z-index: 2;
+}
+
+.presence-watermark {
+  color: var(--green);
+  opacity: 0.05;
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.presence-watermark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.region-card {
+  padding: 2.5rem 2.2rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.region-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--green);
+  transition: height 0.35s ease;
+}
+
+.region-icon-wrapper {
+  margin-bottom: 1.5rem;
+  width: 48px;
+  height: 48px;
+  background: var(--green-subtle);
+  border: 1px solid var(--green-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--green);
+  transition: all 0.3s ease;
+}
+
+.region-card:hover {
+  background: var(--bg-raised);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11, 122, 61, 0.08);
+}
+
+.region-card:hover .region-icon-wrapper {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.region-card:hover::before {
+  height: 100%;
+}
+
+.region-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.region-card:hover h4 {
+  color: var(--green);
+}
+
+.region-card ul {
+  list-style: none;
+}
+
+.region-card li {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.region-card li:last-child { border-bottom: none; }
+
+.region-card li::before {
+  content: '— ';
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .service-card p {
   font-size: 0.92rem;
   color: var(--text-dim);
@@ -1359,9 +1619,21 @@ section {
 
   .about-grid,
   .services-intro,
-  .why-grid {
+  .why-grid,
+  .presence-wrapper {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .presence-intro {
+    position: static;
+  }
+
+  .presence-watermark {
+    top: -50%;
+    left: -20%;
+    width: 300px;
+    height: 300px;
   }
 
   .contact-grid {

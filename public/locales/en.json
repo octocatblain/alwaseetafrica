@@ -95,7 +95,9 @@
     "centralAfrica": "Central Africa",
     "centralAfricaCountries": "Cameroon, Democratic Republic of Congo",
     "southernAfrica": "Southern Africa",
-    "southernAfricaCountries": "South Africa, Zambia, Zimbabwe"
+    "southernAfricaCountries": "South Africa, Zambia, Zimbabwe",
+    "northAfrica": "North Africa",
+    "northAfricaCountries": "Morocco, Libya, Egypt"
   },
   "why": {
     "eyebrow": "Why Partner With Us",
